@@ -1,0 +1,13 @@
+venv/
+env/
+.DS_Store
+__pycache__/
+*.pyc
+.vscodesendgrid.env
+file_storage/
+api.json
+*.csv
+*.pdf
+*.html
+.vscode/
+secret.ini

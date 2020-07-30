@@ -1,0 +1,10 @@
+Flask==1.1.2
+Flask-RESTful==0.3.8
+pdfkit==0.6.1
+pandas==1.1.0
+boto3==1.14.31
+requests==2.24.0
+bs4==0.0.1
+lxml==4.5.2
+psycopg2-binary==2.8.5
+selenium==3.141.0
