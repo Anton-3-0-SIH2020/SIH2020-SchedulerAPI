@@ -11,3 +11,5 @@ api.json
 *.html
 .vscode/
 secret.ini
+api_secret.txt
+access.db
