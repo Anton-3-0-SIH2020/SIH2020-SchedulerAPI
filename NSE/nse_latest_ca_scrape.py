@@ -133,7 +133,7 @@ def add_to_db():
     # Initializing DB
     nse = NSEScraper()
     currData = nse.get_corporate_actions()
-    nse_data_list = mergeData(currData)[:1]
+    nse_data_list = mergeData(currData)
     connection = psycopg2.connect(
         user=USER, password=PASSWORD, host=HOST, port=PORT, database=DATABASE,
     )

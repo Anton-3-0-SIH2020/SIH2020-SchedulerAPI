@@ -118,7 +118,7 @@ def money_control_ca_scraper():
 
 
 def add_to_db():
-    ca_list = money_control_ca_scraper()[:1]
+    ca_list = money_control_ca_scraper()
     # Initializing the database
     connection = psycopg2.connect(
         user=USER, password=PASSWORD, host=HOST, port=PORT, database=DATABASE,

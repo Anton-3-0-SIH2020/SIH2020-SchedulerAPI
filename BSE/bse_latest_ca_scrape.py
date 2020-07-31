@@ -74,7 +74,7 @@ def latest_ca_scrape():
                 dataList.append(data)
 
     # Initializing the database
-    dataList = dataList[:1]
+    dataList = dataList
     connection = psycopg2.connect(
         user=USER, password=PASSWORD, host=HOST, port=PORT, database=DATABASE,
     )
