@@ -34,6 +34,8 @@ class MoneyControl(Resource):
         key = request.args.get("key", None)
         if not key:
             return {"error": "Key not provided"}
+        if key != API_KEY:
+            return {"error": "Key is invalid"}
         return {"status": mc_scrape.add_to_db()}
 
 
@@ -42,6 +44,8 @@ class NSE(Resource):
         key = request.args.get("key", None)
         if not key:
             return {"error": "Key not provided"}
+        if key != API_KEY:
+            return {"error": "Key is invalid"}
         return {"status": nse_scrape.add_to_db()}
 
 
@@ -50,6 +54,8 @@ class BSE(Resource):
         key = request.args.get("key", None)
         if not key:
             return {"error": "Key not provided"}
+        if key != API_KEY:
+            return {"error": "Key is invalid"}
         return {"status": bse_scrape.latest_ca_scrape()}
 
 
