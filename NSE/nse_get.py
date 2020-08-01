@@ -17,7 +17,7 @@ def latest_ca():
         user=USER, password=PASSWORD, host=HOST, port=PORT, database=DATABASE,
     )
     cursor = connection.cursor()
-    query = f'SELECT * FROM nse_ca'
+    query = f'SELECT * FROM latest_nse_ca'
     cursor.execute(query)
     ca_array = []
     for data in cursor:
