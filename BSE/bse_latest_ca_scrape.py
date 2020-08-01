@@ -108,11 +108,10 @@ def latest_ca_scrape():
                     data[10],
                 ),
             )
+            connection.commit()
         except:
-            # print("Skipped")
-            pass
+            connection.rollback()
     # Deleting the preexisting data from the database
-    connection.commit()
     cursor.execute("DELETE FROM latest_bse_ca")
     connection.commit()
     cursor_new.close()

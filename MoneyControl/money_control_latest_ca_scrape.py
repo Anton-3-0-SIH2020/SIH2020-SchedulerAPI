@@ -141,11 +141,9 @@ def add_to_db():
             cursor.execute(
                 add_data_to_db, (data[0], data[1], data[2], data[3], data[4], data[5])
             )
+            connection.commit()
         except:
-            pass
-            # print('Skipped')
-            # Deleting the preexisting data from the database
-    connection.commit()
+            connection.rollback()
     cursor_new.execute("DELETE FROM latest_mc_ca")
     connection.commit()
     cursor_new.close()

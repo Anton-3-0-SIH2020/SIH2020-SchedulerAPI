@@ -166,11 +166,9 @@ def add_to_db():
                     data[9],
                 ),
             )
+            connection.commit()
         except:
-            # print("Skipped")
-            pass
-    # Deleting the pre-existing data from the database
-    connection.commit()
+            connection.rollback()
     cursor.execute("DELETE FROM latest_nse_ca")
     connection.commit()
     cursor_new.close()
