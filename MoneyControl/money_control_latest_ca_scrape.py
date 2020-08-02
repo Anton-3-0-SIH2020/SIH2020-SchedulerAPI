@@ -152,6 +152,10 @@ def add_to_db():
     add_data_to_db = "INSERT INTO latest_mc_ca VALUES (%s,%s,%s,%s,%s,%s)"
     for data in ca_list:
         uniqueKey = data[0] + data[1] + data[2]
+        try:
+            datetime.strptime(data[4], "%d-%m-%Y").strftime("%Y-%m-%d")
+        except:
+            continue
         cursor.execute(
             add_data_to_db,
             (
